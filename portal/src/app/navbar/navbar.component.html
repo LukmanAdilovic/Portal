@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="mat-elevation-z4">
+    <span>Portal</span>
+
+    <a mat-button routerLink="home">Home</a>
+
+    <div class="spacer"></div>
+
+      <button type="button"  *ngIf="!autheticated.isAutheticated" class="btn btn-outline-warning" routerLink="login"><span class="clearfix d-none d-sm-inline-block">Log In</span></button>
+      <button type="button" *ngIf="autheticated.isAutheticated" class="btn btn-outline-warning" (click)="signout()"><span class="clearfix d-none d-sm-inline-block">Log Out</span></button>
+
+</mat-toolbar>
+
+
